@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Futuro</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        .hero-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero-section .btn-principal {
+            margin-top: 20px;
+        }
+
+        /* Precios con descuento en las tarjetas */
+        .precio-oferta {
+            margin: 10px 0;
+        }
+        .precio-oferta s {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .precio-oferta strong {
+            color: #27ae60;
+            font-size: 1.2em;
+        }
+        .precio-oferta span {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/descarga.png" alt="Logo Instituto Futuro" class="logo-img">
+            <h2>CIBERTEC</h2>
+        </div>
+        <nav>
+            <ul class="menu-flex">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#registro" class="btn-nav">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Construye tu futuro profesional</h1>
+            <p>Conoce nuestros programas académicos y encuentra tu camino.</p>
+            <a href="#registro" class="btn-principal">Quiero información</a>
+        </section>
+
+        <section id="programas" class="seccion-programas">
+            <h2 class="titulo-centrado">Nuestros Programas</h2>
+
+            <div class="layout-principal">
+
+                <div class="grid-programas">
+                    <article class="card">
+                        <div class="icono-card">
+                            <img src="img/desarrollo.jpg" alt="Ícono Desarrollo de Software">
+                        </div>
+                        <h3>Desarrollo de Software</h3>
+                        <p>Aprende lógica, algoritmos y creación de sistemas.</p>
+                        <p class="precio-oferta"><s>S/ 450.00</s> <strong>S/ 360.00</strong> <span>-20%</span></p>
+                        <a href="software.html" class="btn-info">Ver más</a>
+                    </article>
+
+                    <article class="card">
+                        <div class="icono-card">
+                            <img src="img/ia.jpg" alt="Ícono Inteligencia Artificial">
+                        </div>
+                        <h3>Inteligencia Artificial</h3>
+                        <p>Fundamentos de IA y automatización de procesos.</p>
+                        <p class="precio-oferta"><s>S/ 520.00</s> <strong>S/ 416.00</strong> <span>-20%</span></p>
+                        <a href="ia.html" class="btn-info">Ver más</a>
+                    </article>
+
+                    <article class="card destacada">
+                        <div class="icono-card">
+                            <img src="img/web.jpg" alt="Ícono Diseño Web">
+                        </div>
+                        <h3>Diseño Web</h3>
+                        <p>Creación de interfaces usando HTML, CSS y JavaScript.</p>
+                        <p class="precio-oferta"><s>S/ 380.00</s> <strong>S/ 304.00</strong> <span>-20%</span></p>
+                        <a href="web.html" class="btn-info">Ver más</a>
+                    </article>
+                </div>
+
+                <aside class="contenedor-form lateral" id="registro">
+                    <h3>Regístrate ahora</h3>
+                    <p class="texto-form">Déjanos tus datos y recibe información.</p>
+
+                    <!-- method="post": los datos personales no deben ir en la URL.
+                         action="#": no hay servidor, el envío se simula con JavaScript. -->
+                    <form id="miFormulario" method="post" action="#" onsubmit="return false;">
+                        <div class="grupo-form">
+                            <label for="txtNombre">Nombre completo:</label>
+                            <input type="text" id="txtNombre" name="nombre" placeholder="Ej. Juan Pérez">
+                            <span class="error" id="errNombre"></span>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="txtCorreo">Correo electrónico:</label>
+                            <input type="email" id="txtCorreo" name="correo" placeholder="Ej. correo@ejemplo.com">
+                            <span class="error" id="errCorreo"></span>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="txtTelefono">Teléfono:</label>
+                            <input type="tel" id="txtTelefono" name="telefono" placeholder="Ej. 987654321" maxlength="9">
+                            <span class="error" id="errTelefono"></span>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="txtEdad">Edad:</label>
+                            <input type="number" id="txtEdad" name="edad" placeholder="Ej. 18" min="16" max="70">
+                            <span class="error" id="errEdad"></span>
+                        </div>
+
+                        <div class="grupo-form">
+                            <label for="selPrograma">Programa de interés:</label>
+                            <select id="selPrograma" name="programa">
+                                <option value="">Selecciona un programa</option>
+                                <option value="0">Desarrollo de Software</option>
+                                <option value="1">Inteligencia Artificial</option>
+                                <option value="2">Diseño Web</option>
+                            </select>
+                            <span class="error" id="errPrograma"></span>
+                        </div>
+
+                        <div class="grupo-form">
+                            <div class="check-container">
+                                <input type="checkbox" id="chkTerminos" name="terminos">
+                                <label for="chkTerminos">Acepto los términos y condiciones</label>
+                            </div>
+                            <span class="error" id="errTerminos"></span>
+                        </div>
+
+                        <button type="button" class="btn-principal btn-ancho" onclick="enviarRegistro()">Enviar registro</button>
+                        <div id="mensaje-exito"></div>
+                        <pre id="simulacion-envio" class="simulacion"></pre>
+                    </form>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-completo">
+        <div class="footer-grid">
+            <div class="col-footer">
+                <h4>AYUDA</h4>
+                <ul class="lista-footer">
+                    <li>Centro de ayuda</li>
+                    <li>Métodos de pago</li>
+                    <li>Tipos de envío</li>
+                    <li>Promociones y legales</li>
+                    <li>Cambios, devoluciones y garantías</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <h4>Enlaces rápidos</h4>
+                <ul class="lista-footer">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#registro">Registro</a></li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <h4>Contacto</h4>
+                <p>📞 +51 982 163 660</p>
+                <p>✉️ 1780425@senati.pe</p>
+                <h3>MANTENTE AL DÍA</h3>
+                <p>Inscríbete y obtén 20% de descuento en tu primera compra</p><br>
+                <form class="form-suscripcion">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit">SUSCRIBIRME</button>
+                </form>
+                <div class="redes-sociales"><br>
+                    <a>FB: Mathias Pz</a>
+                    <a>X</a>
+                    <a>IG</a>
+                    <a>YT: Mathias Samir De la cruz Perez</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Instituto Futuro. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

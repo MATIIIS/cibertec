@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Instituto Futuro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h2>Instituto Futuro</h2>
+        </div>
+        <nav>
+            <ul class="menu-flex">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-form">
+        <h2>Formulario de Registro</h2>
+        <p>Ingresa tus datos para recibir orientacion.</p>
+
+        <form id="miFormulario" action="#" method="POST">
+            
+            <div class="grupo-form">
+                <label>Nombre Completo:</label>
+                <input type="text" id="txtNombre" placeholder="Tu nombre">
+                <span class="error" id="errNombre"></span>
+            </div>
+
+            <div class="grupo-form">
+                <label>Correo Electronico:</label>
+                <input type="email" id="txtCorreo">
+                <span class="error" id="errCorreo"></span>
+            </div>
+
+            <div class="grupo-form">
+                <label>Edad:</label>
+                <input type="number" id="txtEdad" min="15" max="60">
+                <span class="error" id="errEdad"></span>
+            </div>
+
+            <div class="grupo-form">
+                <label>Programa de Interes:</label>
+                <select id="cboPrograma">
+                    <option value="">-- Selecciona --</option>
+                    <option value="software">Desarrollo de Software</option>
+                    <option value="ia">Inteligencia Artificial</option>
+                    <option value="web">Diseño Web</option>
+                </select>
+                <span class="error" id="errPrograma"></span>
+            </div>
+
+            <div class="grupo-form check-container">
+                <input type="checkbox" id="chkTerminos">
+                <label>Acepto que los datos son correctos</label>
+                <div class="error" id="errTerminos"></div>
+            </div>
+
+            <button type="submit" class="btn-principal" id="btnEnviar">Enviar Registro</button>
+            
+            <div id="mensaje-exito"></div>
+        </form>
+    </main>
+
+    <footer>
+        <p>Instituto Futuro - Proyecto de Frontend</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

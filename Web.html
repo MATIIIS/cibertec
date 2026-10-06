@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web - Instituto Futuro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/descarga.png" alt="Logo Instituto Futuro" class="logo-img">
+            <h2>CIBERTEC</h2>
+        </div>
+        <nav>
+            <ul class="menu-flex">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#programas">Programas</a></li>
+                <li><a href="#registro" class="btn-nav">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <a href="index.html#programas" class="volver">← Volver a programas</a>
+
+    <main class="detalle">
+
+        <section class="detalle-grid">
+            <div class="detalle-imagen">
+    <img src="img/diseño.jpg" alt="Programa Desarrollo de Software" class="img-principal" id="imgPrincipal">
+
+    <div class="miniaturas">
+        <img src="img/diseño2.jpg" alt="Clase de programación" onclick="cambiarImagen(this)">
+        <img src="img/diseño3.jpg" alt="Proyecto final" onclick="cambiarImagen(this)">
+    </div>
+</div>
+            <div class="detalle-info">
+                <h1>Diseño Web</h1>
+        <p class="precio"><s>S/ 380.00</s> <strong>S/ 304.00</strong> <span>-20%</span></p>
+                <ul class="datos-curso">
+                    <li><strong>Duración:</strong> 3 meses</li>
+                    <li><strong>Modalidad:</strong> Presencial / Virtual</li>
+                    <li><strong>Horario:</strong> Martes y jueves, 6:00 pm a 9:00 pm</li>
+                </ul>
+                <a href="#registro" class="btn-principal">Registrarme en este curso</a>
+            </div>
+        </section>
+
+        <section class="detalle-bloque">
+            <h2>Sobre el programa</h2>
+            <p>Crea páginas web modernas que se ven bien en cualquier pantalla. Aprenderás a maquetar, dar estilo y agregar interactividad.</p>
+        </section>
+
+        <section class="detalle-bloque">
+            <h2>Lo que aprenderás</h2>
+            <ul>
+                <li>HTML5 y etiquetas semánticas</li>
+                <li>CSS3: colores, espaciado y bordes</li>
+                <li>Flexbox y Grid para ordenar el contenido</li>
+                <li>JavaScript básico y manejo del DOM</li>
+                <li>Formularios con validaciones</li>
+                <li>Proyecto final: landing page</li>
+            </ul>
+        </section>
+
+        <section class="detalle-bloque contenedor-form detalle-form" id="registro">
+            <h3>Regístrate en Diseño Web</h3>
+            <p class="texto-form">Completa tus datos y te contactaremos.</p>
+
+            <form id="miFormulario" method="post" action="#" onsubmit="return false;">
+                <div class="grupo-form">
+                    <label for="txtNombre">Nombre completo:</label>
+                    <input type="text" id="txtNombre" name="nombre" placeholder="Ej. Juan Pérez">
+                    <span class="error" id="errNombre"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="txtCorreo">Correo electrónico:</label>
+                    <input type="email" id="txtCorreo" name="correo" placeholder="Ej. correo@ejemplo.com">
+                    <span class="error" id="errCorreo"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="txtTelefono">Teléfono:</label>
+                    <input type="tel" id="txtTelefono" name="telefono" placeholder="Ej. 987654321" maxlength="9">
+                    <span class="error" id="errTelefono"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="txtEdad">Edad:</label>
+                    <input type="number" id="txtEdad" name="edad" placeholder="Ej. 18" min="16" max="70">
+                    <span class="error" id="errEdad"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="selPrograma">Programa:</label>
+                    <select id="selPrograma" name="programa">
+                        <option value="">Selecciona un programa</option>
+                        <option value="0">Desarrollo de Software</option>
+                        <option value="1">Inteligencia Artificial</option>
+                        <option value="2" selected>Diseño Web</option>
+                    </select>
+                    <span class="error" id="errPrograma"></span>
+                </div>
+
+                <div class="grupo-form">
+                    <div class="check-container">
+                        <input type="checkbox" id="chkTerminos" name="terminos">
+                        <label for="chkTerminos">Acepto los términos y condiciones</label>
+                    </div>
+                    <span class="error" id="errTerminos"></span>
+                </div>
+
+                <button type="button" class="btn-principal btn-ancho" onclick="enviarRegistro()">Enviar registro</button>
+                <div id="mensaje-exito"></div>
+                <pre id="simulacion-envio" class="simulacion"></pre>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer-completo">
+        <div class="footer-grid">
+            <div class="col-footer">
+                    <h4>AYUDA</h4>
+                <ul>
+                    <li>Centro de ayuda</a></li>
+                    <li>Métodos de pago</a></li>
+                    <li>Tipos de envío</a></li>
+                    <li>Promociones y legales</a></li>
+                    <li>Cambios, devoluciones y garantías</a></li>
+                    <li>Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <h4>Enlaces rápidos</h4>
+                <ul class="lista-footer">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#registro">Registro</a></li>
+                </ul>
+            </div>
+            <div class="col-footer">
+                <h4>Contacto</h4>
+                <p>📞 +51 982 163 660</p>
+                <p>✉️ 1780425@senati.pe</p>
+                <h3>MANTENTE AL DÍA</h3>
+                <p>Inscríbete y obtén 20% de descuento en tu primera compra</p><br>
+                <form class="form-suscripcion">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit">SUSCRIBIRME</button>
+                </form>
+                <div class="redes-sociales"><br>
+                    <a>FB: Mathias Pz</a>
+                    <a>X</a>
+                    <a>IG</a>
+                    <a>YT: Mathias Samir De la cruz Perez</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Instituto Futuro. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
